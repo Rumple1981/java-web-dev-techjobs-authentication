@@ -2,6 +2,7 @@ package org.launchcode.javawebdevtechjobsauthentication.controllers;
 
 import org.launchcode.javawebdevtechjobsauthentication.models.data.JobRepository;
 import org.launchcode.javawebdevtechjobsauthentication.models.Job;
+import org.launchcode.javawebdevtechjobsauthentication.models.data.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,10 @@ import java.util.Optional;
  */
 @Controller
 public class HomeController {
+
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Autowired
     private JobRepository jobRepository;
